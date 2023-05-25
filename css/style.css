@@ -138,6 +138,20 @@ main{
     line-height: 1.6rem;
     color: #757575
 }
+.main-tables-container{
+    position: relative;
+}
+.main-tables-container--arrow{
+position: absolute;
+background-image: url('../assets/icons/right-arrow.svg');
+top: 170px;
+right: 50px;
+width: 12px;
+height: 12px;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
 .main-currency-table{
     width: 70%;
     min-width: 235px;
@@ -161,20 +175,23 @@ main{
     margin: 0 auto;
 }
 .currency-table--container table{
-    width: 100%;
+    width: 70%;
     height: 100%;    
+    margin: 0 auto;
 }
 .currency-table--container td{
     width: 50%;
+    text-align: left;
     font-size: 1.6rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.9rem;
     color: var(--grey);
     background-color: var(--just-white)
 }
 .currency-table--container .table__right{
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.4rem ;
+    text-align: right;
     line-height: 1.7rem;
     color: #757575;    
 }
@@ -222,4 +239,42 @@ main{
     font-size: 1.4rem;
     line-height: 1.5rem;
     color: black;
+}
+.main-product-detail{
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background-color: var(--warm-black);
+}
+.product-detail--batata-logo{
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    background-image: url('../assets/icons/batata.svg');
+    top: -12.5px;
+    left: calc(50% - 20px);
+}
+.product-detail--title{
+    width: 90%;
+    min-width: 288;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+.product-detail--title h2{
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+.product-detail--title p{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+    color: #808080
 }

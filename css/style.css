@@ -368,13 +368,21 @@ background-repeat: no-repeat;
     line-height: 1.8rem;
     color: #757575;
 }
+.plans-container--slider{
+    display: flex;
+    height: 316px;
+    overflow-x: scroll;              /* * Scroll horizontal */
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity; /*! para q cambie de elemento directamente, centrandolo, cambia de una tarjeta a otra directamente en lugar de hacer un scroll mas normal*/
+}
 .plans-container--card{
     position: relative;
+    scroll-snap-align: center;              /* * Esto centra la tarjeta cuando se hace el scroll*/
     width: 60%;
     min-width: 190px;
     max-width: 300px;
     height: 250px;
-    margin: 50px auto 0px;
+    margin: 50px 30px 0;
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 15px;
@@ -453,7 +461,7 @@ background-repeat: no-repeat;
     font-size: 1.2rem;
     padding: 9px;   
 }
-.plans-container--card .monyhly-card--ca{
+.plans-container--card .monthly-card--ca{
     width: 150px;
     height: 48px;
     background-color: var(--off-white);
@@ -465,13 +473,49 @@ background-repeat: no-repeat;
     line-height: 1.8rem;
     color: var(--black);
 }
-.plans-container--card .monyhly-card--ca span{
+.plans-container--card .monthly-card--ca span{
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     background-image: url('../assets/icons/right-arrow.svg');
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-position: center;
+    background-size: cover;    
+    vertical-align: text-bottom;                                       /*! Con esto alineamos el texto de al lado a pesar de q el texto esta en otra clase! */
+}
+/* Third Card */
+.plans-container--card .biannual{
+    position: absolute;
+    width: 101px;
+    height: 31px;
+    border-radius: 8px;
+    color: var(--just-white);
+    background-color: purple;    
+    top: -15.5px;
+    left: calc(50% - 50.5px);    
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 9px;   
+}
+.plans-container--card .biannual-card--ca{
+    width: 150px;
+    height: 48px;
+    background-color: var(--off-white);
+    border: 2px solid;
+    border-color: purple;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+}
+.plans-container--card .biannual-card--ca span{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url('../assets/icons/right-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
     vertical-align: text-bottom;                                       /*! Con esto alineamos el texto de al lado a pesar de q el texto esta en otra clase! */
 }

@@ -88,7 +88,7 @@ header img{
     color: var(--black);
 }
 .header--button span{
-    display: inline-block;       /* Esto es necesario para que se vea*/
+    display: inline-block;       /* * Esto es necesario para que se vea*/
     width: 13px;
     height: 8px;
     margin-left: 10px;
@@ -141,24 +141,43 @@ main{
 }
 .main-tables-container{
     position: relative;
+    display: flex;    
+    overflow-x: scroll;              /* * Scroll horizontal */
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
 }
 .main-tables-container--arrow{
 position: absolute;
 background-image: url('../assets/icons/right-arrow.svg');
 top: 170px;
-right: 50px;
+right: -10px;
 width: 12px;
 height: 12px;
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 }
+.main-tables-container--arrow-2{
+position: absolute;
+background-image: url('../assets/icons/right-arrow.svg');
+top: 170px;
+left: -10px;
+width: 12px;
+height: 12px;
+background-size: cover;
+transform: rotate(180deg);
+background-position: center;
+background-repeat: no-repeat;
+}
 .main-currency-table{
+    position: relative;
     width: 70%;
     min-width: 235px;
     max-width: 500px;
     height: 360px;
-    margin: 0 auto;
+    margin: 0 40px;
+    /* margin:  0 0 30px 50px; */
+    scroll-snap-align: center;
     font-family: "Inter", sans-serif; /* si no esta la Inter entonces carga sans-serif*/
 }
 .main-currency-table .currency-table--title{
@@ -167,6 +186,13 @@ background-repeat: no-repeat;
     font-weight: bold;
     line-height: 2.3rem;
     color: var(--bitcoin-orange);
+}
+.main-currency-table .comitions-table--title{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
 }
 .main-currency-table .currency-table--container{
     width: 90%;
@@ -234,7 +260,15 @@ background-repeat: no-repeat;
     margin: 0 auto;
     padding: 8px;
     border-radius: 8px;
-
+}
+.comitions-table--date{
+    background-color: #E7F5FF;
+    width: 210px;
+    height: 30px;
+    margin-top: 15px;
+    margin: 0 auto;
+    padding: 8px;
+    border-radius: 8px; 
 }
 .currency-table--date p{
     font-size: 1.4rem;
@@ -329,6 +363,7 @@ background-repeat: no-repeat;
     min-width: 320px;
     height: 50vh;
     background-image: url('../assets/img/bitcoinbaby2x.jpg');
+    /* background-attachment: fixed; */                               /* * este es un efecto*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -352,7 +387,7 @@ background-repeat: no-repeat;
     min-width: 288px;
     height: auto;
     margin: 0 auto;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     margin-bottom: 30px;
 }
 .plans--title h2{
